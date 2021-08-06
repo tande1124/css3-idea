@@ -5,6 +5,7 @@
       <layout2></layout2>
       <layout3></layout3>
       <layout4></layout4>
+      <layout5></layout5>
 		</div>
   </div>
 </template>
@@ -14,7 +15,8 @@ import { defineComponent } from 'vue';
 import Layout1 from "@/components/layout/使用clip-path排版蜂窝布局.vue";
 import Layout2 from "@/components/layout/使用flexbox排版各种布局.vue";
 import Layout3 from "@/components/layout/使用float排版环境文本.vue";
-import Layout4 from "@/components/layout/使用伪类制造照片堆叠效果.vue";
+import Layout4 from "@/components/layout/使用伪类before与after制造照片堆叠效果.vue";
+import Layout5 from "@/components/layout/使用letter-spacing排版倒序文本.vue";
 
 export default defineComponent({
   name: 'Home',
@@ -23,6 +25,7 @@ export default defineComponent({
     Layout2,
     Layout3,
     Layout4,
+    Layout5
   },
 });
 </script>

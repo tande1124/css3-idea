@@ -13,7 +13,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .stackthree, 
 .stackthree::before,
 .stackthree::after {
@@ -57,5 +56,4 @@ export default {
   position: relative;
   margin: 50px;
 }
-
 </style>
