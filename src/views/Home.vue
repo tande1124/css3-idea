@@ -7,6 +7,9 @@
       <layout4></layout4>
       <layout5></layout5>
 		</div>
+    <div class="content behavior">
+      <behavior1></behavior1>
+    </div>
   </div>
 </template>
 
@@ -18,6 +21,8 @@ import Layout3 from "@/components/layout/使用float排版环境文本.vue";
 import Layout4 from "@/components/layout/使用伪类before与after制造照片堆叠效果.vue";
 import Layout5 from "@/components/layout/使用letter-spacing排版倒序文本.vue";
 
+import Behavior1 from "@/components/behavior/使用@hover定制悬浮提示.vue";
+
 export default defineComponent({
   name: 'Home',
   components: {
@@ -25,7 +30,8 @@ export default defineComponent({
     Layout2,
     Layout3,
     Layout4,
-    Layout5
+    Layout5,
+    Behavior1
   },
 });
 </script>
@@ -82,6 +88,14 @@ export default defineComponent({
 		}
 		&::after {
 			content: "布局";
+		}
+	}
+  &.behavior .bruce {
+		&::before {
+			background-color: #66f;
+		}
+		&::after {
+			content: "行为";
 		}
 	}
 }
