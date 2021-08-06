@@ -1,39 +1,33 @@
 <template>
-   <div class="bruce flex-ct-x" data-title="使用:hover定制悬浮提示">
-     <ul class="hover-tips">
-      <li data-name="姨妈红"></li>
-      <li data-name="基佬紫"></li>
-      <li data-name="箩底橙"></li>
-      <li data-name="姣婆蓝"></li>
-      <li data-name="大粪青"></li>
-      <li data-name="原谅绿"></li>
-     </ul>
-   </div>
+	<div class="bruce flex-ct-x" data-title="使用:hover定制悬浮提示">
+		<ul class="hover-tips">
+			<li data-name="姨妈红"></li>
+			<li data-name="基佬紫"></li>
+			<li data-name="箩底橙"></li>
+			<li data-name="姣婆蓝"></li>
+			<li data-name="大粪青"></li>
+			<li data-name="原谅绿"></li>
+		</ul>
+	</div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss" scoped>
 $color-list: #f66 #66f #f90 #09f #9c3 #3c9;
-.hover-tips{
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-  li {
-    position: relative;
-    padding:  2px;
-    border: 2px solid transparent;
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
-    background-clip: content-box;
-    cursor: pointer;
-    transition: all 300ms;
-    &::before,
+.hover-tips {
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+	li {
+		position: relative;
+		padding: 2px;
+		border: 2px solid transparent;
+		border-radius: 100%;
+		width: 24px;
+		height: 24px;
+		background-clip: content-box;
+		cursor: pointer;
+		transition: all 300ms;
+		&::before,
 		&::after {
 			position: absolute;
 			left: 50%;
@@ -61,23 +55,22 @@ $color-list: #f66 #66f #f90 #09f #9c3 #3c9;
 			height: 0;
 			content: "";
 		}
-    @each $color in  $color-list {
-      $index: index($color-list, $color);
-      &:nth-child(#{$index}) {
+		@each $color in $color-list {
+			$index: index($color-list, $color);
+			&:nth-child(#{$index}) {
 				background-color: $color;
 				&:hover {
 					border-color: $color;
 				}
 			}
-    }
-    &:hover {
-      &::before，
-      &::after {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-      }
-    }
-  }
+		}
+		&:hover {
+			&::before,
+			&::after {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
 }
-
 </style>
