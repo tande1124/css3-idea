@@ -9,6 +9,7 @@
 		</div>
     <div class="content behavior">
       <behavior1></behavior1>
+      <behavior2></behavior2>
     </div>
   </div>
 </template>
@@ -22,6 +23,7 @@ import Layout4 from "@/components/layout/使用伪类before与after制造照片�
 import Layout5 from "@/components/layout/使用letter-spacing排版倒序文本.vue";
 
 import Behavior1 from "@/components/behavior/使用@hover定制悬浮提示.vue";
+import Behavior2 from "@/components/behavior/使用@hover控制悬浮边框.vue";
 
 export default defineComponent({
   name: 'Home',
@@ -31,7 +33,8 @@ export default defineComponent({
     Layout3,
     Layout4,
     Layout5,
-    Behavior1
+    Behavior1,
+    Behavior2  
   },
 });
 </script>
